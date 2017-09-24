@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*-
+"""
+    Project: bp-voltmeter
+    File: bp-voltmeter.py
+    Version: 0.1
+    Create by: Rom1 <rom1@canel.ch>
+               CANEL - https://www.canel.ch
+    Date: 23/09/17
+    License: GNU GENERAL PUBLIC LICENSE v3
+    Language: Python 3
+    Description: A voltmeter for the Bus Pirate in the terminal mode.
+
+"""
 
 import argparse
 import os
