@@ -100,7 +100,12 @@ arguments.add_argument("-d", "--device", type=str, default="/dev/buspirate0", he
 arguments.add_argument("-s", "--speed", type=int, default=115200, help="Serial port baud rate")
 args = arguments.parse_args()
 
-bp = serial.Serial(args.device, args.speed, timeout = 0.1)
+try:
+    bp = serial.Serial(args.device, args.speed, timeout = 0.1)
+except:
+    print("No device found")
+    sys.exit(1)
+
 
 def quit(signal, frame):
     bp.write(b'\x0F')
